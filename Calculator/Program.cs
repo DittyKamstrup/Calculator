@@ -14,9 +14,9 @@ namespace Calculator
 
             string input1 = Console.ReadLine();
 
-            int tal1 = Int32.Parse(input1);
+            double tal1 = Double.Parse(input1);
 
-            Console.WriteLine("Tast +, -, * eller /");
+            Console.WriteLine("Tast +, -, *, / eller ^");
 
             string input2 = Console.ReadLine();
 
@@ -26,7 +26,7 @@ namespace Calculator
 
             string input3 = Console.ReadLine();
 
-            int tal2 = Int32.Parse(input3);
+            double tal2 = Double.Parse(input3);
 
 
             Calculate lommeregner = new Calculate(tal1, faktora, tal2);
@@ -37,7 +37,7 @@ namespace Calculator
             while (true)
             {
                 tal1 = lommeregner.UdregnFaktorer(tal1, faktora, tal2);
-                Console.WriteLine("Tast +, -, * eller /");
+                Console.WriteLine("Tast +, -, *, / eller ^");
 
                 input2 = Console.ReadLine();
 
@@ -47,7 +47,7 @@ namespace Calculator
 
                 input3 = Console.ReadLine();
 
-                tal2 = Int32.Parse(input3);
+                tal2 = Double.Parse(input3);
 
                 Console.WriteLine($"{lommeregner.UdregnFaktorer(tal1, faktora, tal2)}");
             }

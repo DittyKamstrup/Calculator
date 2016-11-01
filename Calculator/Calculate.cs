@@ -8,13 +8,13 @@ namespace Calculator
 {
     class Calculate
     {
-        int result { get; set; }
-        int tal1 { get; set; }
-        int tal2 { get; set; }
+        double result { get; set; }
+        double tal1 { get; set; }
+        double tal2 { get; set; }
         string para { get; set; }
 
 
-        public Calculate(int tal1, string para,int tal2)
+        public Calculate(double tal1, string para,double tal2)
         {
             this.result = result;
             this.tal1 = tal1;
@@ -22,13 +22,13 @@ namespace Calculator
             this.para = para;
         }
 
-        public int UdregnFaktorer(int tal1, string para, int tal2)
+        public double UdregnFaktorer(double tal1, string para, double tal2)
         {
-            int result = 0;
+            double result = 0;
 
             if (para == "+")
             {
-                
+
                 result = tal1 + tal2;
             }
 
@@ -46,6 +46,17 @@ namespace Calculator
             {
                 result = tal1 / tal2;
             }
+
+            else if (para == "^")
+            {
+                result = tal1;
+                for (int i = 1; i < tal2; i++)
+                {
+                    result = result * tal1;
+                }
+                return result;
+            }
+
 
             return result;
         }
