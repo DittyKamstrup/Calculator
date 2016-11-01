@@ -28,12 +28,33 @@ namespace Calculator
 
             int tal2 = Int32.Parse(input3);
 
+
             Calculate lommeregner = new Calculate(tal1, faktora, tal2);
 
             
             Console.WriteLine($"{lommeregner.UdregnFaktorer(tal1, faktora, tal2)}");
 
-            
+            while (true)
+            {
+                tal1 = lommeregner.UdregnFaktorer(tal1, faktora, tal2);
+                Console.WriteLine("Tast +, -, * eller /");
+
+                input2 = Console.ReadLine();
+
+                faktora = input2;
+
+                Console.WriteLine("Tast tal");
+
+                input3 = Console.ReadLine();
+
+                tal2 = Int32.Parse(input3);
+
+                Console.WriteLine($"{lommeregner.UdregnFaktorer(tal1, faktora, tal2)}");
+            }
+
+
+
+
 
 
         }
