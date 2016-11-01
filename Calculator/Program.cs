@@ -28,6 +28,11 @@ namespace Calculator
 
             int tal2 = Int32.Parse(input3);
 
+            Calculate lommeregner = new Calculate(tal1, faktora, tal2);
+
+            
+            Console.WriteLine($"{lommeregner.UdregnFaktorer(tal1, faktora, tal2)}");
+
             
 
 
