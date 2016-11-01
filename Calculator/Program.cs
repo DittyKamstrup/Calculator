@@ -20,13 +20,15 @@ namespace Calculator
 
             string input2 = Console.ReadLine();
 
-            int faktora = Int32.Parse(input2);
+            string faktora = input2;
 
             Console.WriteLine("Tast tal");
 
             string input3 = Console.ReadLine();
 
             int tal2 = Int32.Parse(input3);
+
+            
 
 
         }
